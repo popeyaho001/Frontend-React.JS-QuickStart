@@ -1,7 +1,7 @@
 .home-header-container {
     height: 60px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 40px;
 
     .home-header-content{
         width: 100%;
@@ -9,17 +9,18 @@
         display: flex;
 
         .left-content {
-            width: 25%;
+            width: 20%;
             display: flex;
             align-items: center;
             border: 1px solid green;
 
             .header-logo{
-                background: url('../../assets/logo.svg') center center no-repeat;
+                // background: url('../../assets/logo.svg') center center no-repeat;
                 height: 100%;
                 width: 100%;
                 cursor: pointer;
-
+                transform: scale(0.5, 0.5);
+                margin-left: -45px;
 
             }
 
@@ -31,7 +32,7 @@
         }
 
         .left-content{
-            width: 50%;
+            width: 55%;
             border: 1px solid orange;
             display: flex;
             justify-content: space-between;
@@ -49,15 +50,63 @@
             width: 25%;
             border: 1px solid grey;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
         }
+
+        .support{
+            padding-right: 50px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            i {
+                font-size: 15px;
+                margin-right: 5px;
+            }
+        }
+
+        .language-vi{
+            cursor: pointer;
+            opacity: 0.2;
+
+            &.active{
+                opacity: 1;
+
+                span{
+                    color: orange;
+
+                }
+            }
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
         
+        .language-en{
+            margin: 0 10px;
+            cursor: pointer;
+            opacity: 0.2;
+
+            &.active{
+                opacity: 1;
+
+                span{
+                    color: blue;
+
+                }
+            }
+
+            &:hover{
+                opacity: 0.8;
+            }
+        }
     }
 }
 
 .home-header-banner{
-    background: url('../../assets/header-bg.jpg');
+    background-image: url('../../assets/header-bg.jpg');
     height: 485px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,7 +115,7 @@
     flex-direction: column;
 
     .content-up{
-        border: 1px solid red;
+        background-image: linear-gradient(rgba(126,126,126,0.25), rgba(255,255,255,0.1));
         padding-top: 15px;
         height: 50%;
 
@@ -113,8 +162,12 @@
     }
 
     .content-down{
-        border: 1px solid green;
-        height: 50%;
+        height: 35%;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.9));
 
         .options{
             text-align: center;
